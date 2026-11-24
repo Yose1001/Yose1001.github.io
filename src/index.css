@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* โหมดมืดเปิดเมื่อ <html> มี class "dark" (ปุ่มบนหน้าเว็บเป็นคนสลับ) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ให้แถบเลื่อนของเบราว์เซอร์เป็นสีเข้มตามโหมดมืด */
+html.dark {
+  color-scheme: dark;
+}
+
+/* แถวผลงาน: แถบเลื่อนแนวนอนแบบบาง */
+.project-row {
+  scrollbar-width: thin;
+}
